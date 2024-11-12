@@ -1,0 +1,89 @@
+[INFO     | inferer         | L191  ] | 2024-11-06T14:49:31+0200: Infer with config: AuroraInfererConfig(log_level=20, device=<Device.AUTO: 'auto'>, cuda_devices='0', tta=False, sliding_window_batch_size=4, workers=0, threshold=0.5, sliding_window_overlap=0.5, crop_size=(192, 192, 32), model_selection=<ModelSelection.BEST: 'best'>) and device: cpu
+[INFO     | data            | L138  ] | 2024-11-06T14:49:31+0200: Successfully validated input images (received 1). Input mode: DataMode.NIFTI_FILE
+[INFO     | data            | L160  ] | 2024-11-06T14:49:31+0200: Received files: T1: False, T1C: True, T2: False, FLAIR: False
+[INFO     | data            | L169  ] | 2024-11-06T14:49:31+0200: Inference mode: InferenceMode.T1C_O
+[INFO     | model           | L58   ] | 2024-11-06T14:49:31+0200: No loaded compatible model found (Switching from None to InferenceMode.T1C_O). Loading Model and weights...
+[INFO     | model           | L63   ] | 2024-11-06T14:49:31+0200: Successfully loaded model.
+[INFO     | inferer         | L206  ] | 2024-11-06T14:49:31+0200: Setting up Dataloader
+[INFO     | inferer         | L216  ] | 2024-11-06T14:49:31+0200: Running inference on device := cpu
+[INFO     | model           | L206  ] | 2024-11-06T14:49:59+0200: Post-processing data
+[INFO     | model           | L210  ] | 2024-11-06T14:49:59+0200: Returning post-processed data as Dict of Numpy arrays
+[INFO     | inferer         | L218  ] | 2024-11-06T14:49:59+0200: Finished inference
+[INFO     | inferer         | L222  ] | 2024-11-06T14:49:59+0200: Saving post-processed data as NIfTI files
+[INFO     | data            | L263  ] | 2024-11-06T14:49:59+0200: Saved Output.SEGMENTATION to DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/segmentation.nii
+[INFO     | data            | L263  ] | 2024-11-06T14:49:59+0200: Saved Output.METASTASIS_NETWORK to DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/mask.nii
+[INFO     | inferer         | L226  ] | 2024-11-06T14:49:59+0200: ============================ Finished inference run ============================
+[ERROR    | inferer         | L82   ] | 2024-11-06T14:49:59+0200: Traceback (most recent call last):
+  File "/home/eliyams/anaconda3/envs/env_final_project/lib/python3.11/site-packages/nibabel/loadsave.py", line 100, in load
+    stat_result = os.stat(filename)
+                  ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/preprocess.nii.gz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eliyams/Downloads/FinalProject-main/linux/main.py", line 28, in <module>
+    bms.run()
+  File "/home/eliyams/Downloads/FinalProject-main/linux/main.py", line 23, in run
+    self.analyze()
+  File "/home/eliyams/Downloads/FinalProject-main/linux/main.py", line 18, in analyze
+    main_analysis.main_analysis(self.result_path)
+  File "/home/eliyams/Downloads/FinalProject-main/linux/analysis/main_analysis.py", line 105, in main_analysis
+    origin = nib.load(processed_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eliyams/anaconda3/envs/env_final_project/lib/python3.11/site-packages/nibabel/loadsave.py", line 102, in load
+    raise FileNotFoundError(f"No such file or no access: '{filename}'")
+FileNotFoundError: No such file or no access: 'DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/preprocess.nii.gz'
+
+[INFO     | inferer         | L191  ] | 2024-11-06T15:40:05+0200: Infer with config: AuroraInfererConfig(log_level=20, device=<Device.AUTO: 'auto'>, cuda_devices='0', tta=False, sliding_window_batch_size=4, workers=0, threshold=0.5, sliding_window_overlap=0.5, crop_size=(192, 192, 32), model_selection=<ModelSelection.BEST: 'best'>) and device: cpu
+[INFO     | data            | L138  ] | 2024-11-06T15:40:05+0200: Successfully validated input images (received 1). Input mode: DataMode.NIFTI_FILE
+[INFO     | data            | L160  ] | 2024-11-06T15:40:05+0200: Received files: T1: False, T1C: True, T2: False, FLAIR: False
+[INFO     | data            | L169  ] | 2024-11-06T15:40:05+0200: Inference mode: InferenceMode.T1C_O
+[INFO     | model           | L58   ] | 2024-11-06T15:40:05+0200: No loaded compatible model found (Switching from None to InferenceMode.T1C_O). Loading Model and weights...
+[INFO     | model           | L63   ] | 2024-11-06T15:40:05+0200: Successfully loaded model.
+[INFO     | inferer         | L206  ] | 2024-11-06T15:40:05+0200: Setting up Dataloader
+[INFO     | inferer         | L216  ] | 2024-11-06T15:40:05+0200: Running inference on device := cpu
+[INFO     | model           | L206  ] | 2024-11-06T15:40:34+0200: Post-processing data
+[INFO     | model           | L210  ] | 2024-11-06T15:40:34+0200: Returning post-processed data as Dict of Numpy arrays
+[INFO     | inferer         | L218  ] | 2024-11-06T15:40:34+0200: Finished inference
+[INFO     | inferer         | L222  ] | 2024-11-06T15:40:34+0200: Saving post-processed data as NIfTI files
+[INFO     | data            | L263  ] | 2024-11-06T15:40:34+0200: Saved Output.SEGMENTATION to DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/segmentation.nii
+[INFO     | data            | L263  ] | 2024-11-06T15:40:34+0200: Saved Output.METASTASIS_NETWORK to DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/mask.nii
+[INFO     | inferer         | L226  ] | 2024-11-06T15:40:34+0200: ============================ Finished inference run ============================
+[ERROR    | inferer         | L82   ] | 2024-11-06T15:40:34+0200: Traceback (most recent call last):
+  File "/home/eliyams/anaconda3/envs/env_final_project/lib/python3.11/site-packages/nibabel/loadsave.py", line 100, in load
+    stat_result = os.stat(filename)
+                  ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/preprocess.nii.gz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eliyams/Downloads/FinalProject-main/linux/main.py", line 28, in <module>
+    bms.run()
+  File "/home/eliyams/Downloads/FinalProject-main/linux/main.py", line 23, in run
+    self.analyze()
+  File "/home/eliyams/Downloads/FinalProject-main/linux/main.py", line 18, in analyze
+    main_analysis.main_analysis(self.result_path)
+  File "/home/eliyams/Downloads/FinalProject-main/linux/analysis/main_analysis.py", line 105, in main_analysis
+    origin = nib.load(processed_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eliyams/anaconda3/envs/env_final_project/lib/python3.11/site-packages/nibabel/loadsave.py", line 102, in load
+    raise FileNotFoundError(f"No such file or no access: '{filename}'")
+FileNotFoundError: No such file or no access: 'DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/preprocess.nii.gz'
+
+[INFO     | inferer         | L191  ] | 2024-11-06T15:47:52+0200: Infer with config: AuroraInfererConfig(log_level=20, device=<Device.AUTO: 'auto'>, cuda_devices='0', tta=False, sliding_window_batch_size=4, workers=0, threshold=0.5, sliding_window_overlap=0.5, crop_size=(192, 192, 32), model_selection=<ModelSelection.BEST: 'best'>) and device: cpu
+[INFO     | data            | L138  ] | 2024-11-06T15:47:52+0200: Successfully validated input images (received 1). Input mode: DataMode.NIFTI_FILE
+[INFO     | data            | L160  ] | 2024-11-06T15:47:52+0200: Received files: T1: False, T1C: True, T2: False, FLAIR: False
+[INFO     | data            | L169  ] | 2024-11-06T15:47:52+0200: Inference mode: InferenceMode.T1C_O
+[INFO     | model           | L58   ] | 2024-11-06T15:47:52+0200: No loaded compatible model found (Switching from None to InferenceMode.T1C_O). Loading Model and weights...
+[INFO     | model           | L63   ] | 2024-11-06T15:47:52+0200: Successfully loaded model.
+[INFO     | inferer         | L206  ] | 2024-11-06T15:47:52+0200: Setting up Dataloader
+[INFO     | inferer         | L216  ] | 2024-11-06T15:47:52+0200: Running inference on device := cpu
+[INFO     | model           | L206  ] | 2024-11-06T15:48:21+0200: Post-processing data
+[INFO     | model           | L210  ] | 2024-11-06T15:48:21+0200: Returning post-processed data as Dict of Numpy arrays
+[INFO     | inferer         | L218  ] | 2024-11-06T15:48:21+0200: Finished inference
+[INFO     | inferer         | L222  ] | 2024-11-06T15:48:21+0200: Saving post-processed data as NIfTI files
+[INFO     | data            | L263  ] | 2024-11-06T15:48:21+0200: Saved Output.SEGMENTATION to DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/segmentation.nii
+[INFO     | data            | L263  ] | 2024-11-06T15:48:21+0200: Saved Output.METASTASIS_NETWORK to DICOM files/52724/MRI T1 contrast enhanced/52724_MRI T1CE_23062020/nifti/Results/mask.nii
+[INFO     | inferer         | L226  ] | 2024-11-06T15:48:21+0200: ============================ Finished inference run ============================
