@@ -43,14 +43,15 @@ To set up the project environment, use the provided YAML file to create and acti
 ## Run
 
 
-To run the pipeline go to main.py and paste the path to your nifti file in the 'data_path' variable. Then use the following command(in the project folder):
+**To run the pipeline:**
+go to main.py and paste the path to your nifti file in the 'data_path' variable. Then use the following command(in the project folder):
 
  ```bash
 python main.py
 ```
 
 
-To run by study id use the following command in the terminal:
+**To run by study id use the following command in the terminal:**
 
  ```bash
 /home/eliyams/anaconda3/envs/env_final_project/bin/python /home/eliyams/Downloads/FinalProject-main/linux/Run_By_Study.py
@@ -62,7 +63,7 @@ All of the results can be found in the originial study directory under subdirect
 
 
 
-To run count for all metastasis found in a list of scan:
+**To run count for all metastasis found in a list of scan:**
 
 
 First create a list of file names you want to count in the following format: 
