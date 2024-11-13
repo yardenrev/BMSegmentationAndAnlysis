@@ -43,39 +43,32 @@ To set up the project environment, use the provided YAML file to create and acti
 ## Run
 
 
-To run the pipeline go to main.py and paste the path to your nifti file in the 'data_path' variable. Then use the following command(in the project folder):
+**To run the pipeline:**
+go to main.py and paste the path to your nifti file in the 'data_path' variable. Then use the following command(in the project folder):
 
  ```bash
 python main.py
 ```
 
 
-To run by study id use the following command in the terminal:
+**To run by study id use the following command in the terminal:**
 
  ```bash
 /home/eliyams/anaconda3/envs/env_final_project/bin/python /home/eliyams/Downloads/FinalProject-main/linux/Run_By_Study.py
 ```
 
-Then you will recive a poping message "Enter the study ID (e.g., '249'):" after writing the study id press enter and the pipeline will start for all files in this study. 
-
-All of the results can be found in the originial study directory under subdirectory "results". 
+Then you will recive a poping message "Enter the study ID (e.g., '249'):" after writing the study id press enter and the pipeline will start for all files in this study. All of the results can be found in the originial study directory under subdirectory "results". 
 
 
 
-To run count for all metastasis found in a list of scan:
+**To run count for all metastasis found in a list of scan:**
 
 
-First create a list of file names you want to count in the following format: 
-"filename", "filename2", "filename3" 
-
-Open visual studio code and open the script found in:/home/eliyams/Downloads/FinalProject-main/linux/Count_Mets.py
+First create a list of file names you want to count in the following format: "filename", "filename2", "filename3". Open visual studio code and open the script found in:
+/home/eliyams/Downloads/FinalProject-main/linux/Count_Mets.py
 
 Then paste your list in line 32 in the file like this: 
-file_names = ["filename", "filename2", "filename3"]  
-
-press Ctrl+S or file -> save
-
-Press Ctrl+Alt+N or Run the following command:
+file_names = ["filename", "filename2", "filename3"]. Press Ctrl+S or file -> save then press Ctrl+Alt+N or Run the following command:
 
 ```bash
 /home/eliyams/anaconda3/envs/env_final_project/bin/python /home/eliyams/Downloads/FinalProject-main/linux/Count_Mets.py
